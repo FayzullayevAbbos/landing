@@ -68,8 +68,8 @@ const App = () => {
             </p>
           </header>
 
-          <div className="space-y-8 bg-gray-100 p-6 md:p-10 rounded-xl  max-w-2xl">
-            <section className="bg-gray-100 px-6 md:px-5 rounded-xl  max-w-3xl mx-auto">
+          <div className="space-y-8 bg-gray-100 py-4  md:p-10 rounded-xl  max-w-2xl">
+            <section className="bg-gray-100 px-3  md:px-5 rounded-xl  max-w-3xl mx-auto">
               <h2 className="text-2xl font-semibold text-center text-gray-900 mb-6">
                 Aloqa Ma'lumotlari
               </h2>
