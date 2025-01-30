@@ -17,7 +17,7 @@ const App = () => {
   function ContactItem({icon, label, value, link}) {
     return (
       <div className="flex gap-2 items-center space-x-3 bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition">
-        <div className="w-4 h-6">{icon}</div>
+        <div className="w-3 h-6">{icon}</div>
         <div>
           <p className="text-sm font-semibold text-gray-700">{label}</p>
           <a
@@ -57,21 +57,21 @@ const App = () => {
         <div className="container max-w-[600px] px-4 pt-8 bg-white shadow-lg rounded-2xl">
           <header className="text-center mb-7">
             <div className="w-full flex items-center justify-center">
-              <img width={30} src={logo} alt="logo" />
+              <img width={39} src={logo} alt="logo" />
             </div>
             <h1 className="text-2xl font-medium text-black mb-3">
-              Innovatsion Rivojlanish Agentligi
+              Innovatsion rivojlanish agentligi
             </h1>
-            <p className="text-sm text-gray-700">
+            {/* <p className="text-sm text-gray-700">
               Innovatsiyalar va texnologiyalar bo'yicha mutaxassislarning
               ishonchli manbai.
-            </p>
+            </p> */}
           </header>
 
           <div className=" bg-gray-100 py-4  md:p-4 rounded-xl  ">
             <section className="bg-gray-100 px-3 mb-8  md:px-5 rounded-xl   mx-auto">
               <h2 className="text-2xl font-semibold text-center text-gray-900 mb-6">
-                Aloqa Ma'lumotlari
+                Aloqa ma'lumotlari
               </h2>
               <div className="grid gap-2 md:grid-cols-2">
                 <ContactItem
@@ -110,7 +110,7 @@ const App = () => {
                   link="https://maps.app.goo.gl/CSxXMhR8ZkXEJCNy9"
                 />
                 <ContactItem
-                  icon={<Earth width={30} className=" text-blue-500" />}
+                  icon={<Earth  className=" w-6 h-6 text-blue-500" />}
                   label="Veb-sayt"
                   value="https://innovation.gov.uz/"
                   link="https://innovation.gov.uz/"
@@ -120,7 +120,7 @@ const App = () => {
 
             <section className="bg-gray-100 px-3 md:px-5 rounded-xl  mx-auto">
               <h2 className="text-2xl font-semibold text-center text-gray-900 mb-6">
-                Ijtimoiy Tarmoqlar
+                Ijtimoiy tarmoqlar
               </h2>
               <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
                 <SocialLink
@@ -153,7 +153,7 @@ const App = () => {
 
           <footer className="mt-12 pb-3 text-center text-sm text-gray-600">
             <p>
-              © 2025 Innovatsion Rivojlanish Agentligi. Barcha huquqlar
+              © 2025 Innovatsion rivojlanish agentligi. Barcha huquqlar
               himoyalangan.
             </p>
           </footer>
