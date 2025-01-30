@@ -1,9 +1,13 @@
 import {
   ChevronsLeftRightEllipsis,
   Earth,
+  Facebook,
+  Instagram,
   MailIcon,
   MapPin,
   PhoneIcon,
+  Send,
+  Youtube,
 } from "lucide-react";
 import React from "react";
 import logo from "./assets/logo.png";
@@ -26,6 +30,19 @@ const App = () => {
           </a>
         </div>
       </div>
+    );
+  }
+  function SocialLink({icon, label, link, hoverColor}) {
+    return (
+      <a
+        href={link}
+        className={`flex items-center justify-center space-x-3 bg-white p-4 rounded-lg shadow-sm transition hover:shadow-md ${hoverColor}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {icon}
+        <span className="text-md font-medium">{label}</span>
+      </a>
     );
   }
   return (
@@ -51,8 +68,8 @@ const App = () => {
             </p>
           </header>
 
-          <div className="space-y-8">
-            <section className="bg-gray-100 p-6 md:p-5 rounded-xl  max-w-3xl mx-auto">
+          <div className="space-y-8 bg-gray-100 p-6 md:p-10 rounded-xl  max-w-2xl">
+            <section className="bg-gray-100 px-6 md:px-5 rounded-xl  max-w-3xl mx-auto">
               <h2 className="text-2xl font-semibold text-center text-gray-900 mb-6">
                 Aloqa Ma'lumotlari
               </h2>
@@ -82,7 +99,7 @@ const App = () => {
                   link="mailto:mininnovation@exat.uz"
                 />
                 <ContactItem
-                  icon={<MapPin width={50} className=" text-red-500" />}
+                  icon={<MapPin width={70} className=" text-red-500" />}
                   label="Manzil"
                   value="100174, Toshkent sh., Olmazor tumani, Universitet ko‘chasi, 7-uy"
                   link="https://maps.app.goo.gl/CSxXMhR8ZkXEJCNy9"
@@ -96,51 +113,35 @@ const App = () => {
               </div>
             </section>
 
-            <section>
-              <h2 className="text-xl font-meduim text-center  mb-4">
+            <section className="bg-gray-100 px-6 md:px-10 rounded-xl  max-w-2xl mx-auto">
+              <h2 className="text-2xl font-semibold text-center text-gray-900 mb-6">
                 Ijtimoiy Tarmoqlar
               </h2>
-              <div className="flex flex-col gap-4  items-center ">
-                <div className="flex items-center gap-4">
-                  <a
-                    href="https://www.facebook.com/innovation.gov.uz"
-                    className="text-blue-600 hover:text-blue-800 transition duration-300 text-md font-medium flex items-center space-x-2"
-                    target="_blank" // Yangi tabda ochish
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-facebook-square text-3xl"></i>
-                    <span>Facebook</span>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/innovation.gov.uz/"
-                    className="text-pink-600 hover:text-pink-800 transition duration-300 text-md font-medium flex items-center space-x-2"
-                    target="_blank" // Yangi tabda ochish
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-instagram text-3xl"></i>
-                    <span>Instagram</span>
-                  </a>
-                </div>
-                <div className="flex items-center gap-4">
-                  <a
-                    href="https://t.me/innovatsion_rivojlanish"
-                    className="text-blue-500 hover:text-blue-700 transition duration-300 text-md font-medium flex items-center space-x-2"
-                    target="_blank" // Yangi tabda ochish
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-telegram-plane text-3xl"></i>
-                    <span>Telegram</span>
-                  </a>
-                  <a
-                    href="https://www.youtube.com/channel/UCvL9mBAQQh--TsyZtQKhKzA/videos"
-                    className="text-red-600 hover:text-red-800 transition duration-300 text-md font-medium flex items-center space-x-2"
-                    target="_blank" // Yangi tabda ochish
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-youtube text-3xl"></i>
-                    <span>YouTube</span>
-                  </a>
-                </div>
+              <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
+                <SocialLink
+                  icon={<Facebook className="h-6 w-6 text-blue-600" />}
+                  label="Facebook"
+                  link="https://www.facebook.com/innovation.gov.uz"
+                  hoverColor="hover:text-blue-800"
+                />
+                <SocialLink
+                  icon={<Instagram className="h-6 w-6 text-pink-600" />}
+                  label="Instagram"
+                  link="https://www.instagram.com/innovation.gov.uz/"
+                  hoverColor="hover:text-pink-800"
+                />
+                <SocialLink
+                  icon={<Send className="h-6 w-6 text-blue-500" />}
+                  label="Telegram"
+                  link="https://t.me/innovatsion_rivojlanish"
+                  hoverColor="hover:text-blue-700"
+                />
+                <SocialLink
+                  icon={<Youtube className="h-6 w-6 text-red-600" />}
+                  label="YouTube"
+                  link="https://www.youtube.com/channel/UCvL9mBAQQh--TsyZtQKhKzA/videos"
+                  hoverColor="hover:text-red-800"
+                />
               </div>
             </section>
           </div>
