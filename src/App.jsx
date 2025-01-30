@@ -69,7 +69,7 @@ const App = () => {
           </header>
 
           <div className=" bg-gray-100 py-4  md:p-4 rounded-xl  ">
-            <section className="bg-gray-100 px-3 mb-8  md:px-5 rounded-xl   mx-auto">
+            <section className="bg-gray-100 px-3 mb-8  md:px- rounded-xl   mx-auto">
               <h2 className="text-2xl font-semibold text-center text-gray-900 mb-6">
                 Aloqa ma'lumotlari
               </h2>
@@ -118,7 +118,7 @@ const App = () => {
               </div>
             </section>
 
-            <section className="bg-gray-100 px-3 md:px-5 rounded-xl  mx-auto">
+            <section className="bg-gray-100 px-3 md:px-4   rounded-xl  mx-auto">
               <h2 className="text-2xl font-semibold text-center text-gray-900 mb-6">
                 Ijtimoiy tarmoqlar
               </h2>
