@@ -112,8 +112,8 @@ const App = () => {
                 <ContactItem
                   icon={<Earth width={30} className=" text-blue-500" />}
                   label="Veb-sayt"
-                  value="www.ilmiy.uz"
-                  link="https://www.ilmiy.uz"
+                  value="https://innovation.gov.uz/"
+                  link="https://innovation.gov.uz/"
                 />
               </div>
             </section>
