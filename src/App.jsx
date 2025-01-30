@@ -16,8 +16,8 @@ import bg from "./assets/bg.png";
 const App = () => {
   function ContactItem({icon, label, value, link}) {
     return (
-      <div className="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition">
-        {icon}
+      <div className="flex gap-2 items-center space-x-3 bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition">
+        <div className="w-4 h-6">{icon}</div>
         <div>
           <p className="text-sm font-semibold text-gray-700">{label}</p>
           <a
@@ -68,8 +68,8 @@ const App = () => {
             </p>
           </header>
 
-          <div className="space-y-8 bg-gray-100 py-4  md:p-10 rounded-xl  max-w-2xl">
-            <section className="bg-gray-100 px-3  md:px-5 rounded-xl  max-w-3xl mx-auto">
+          <div className=" bg-gray-100 py-4  md:p-4 rounded-xl  ">
+            <section className="bg-gray-100 px-3 mb-8  md:px-5 rounded-xl   mx-auto">
               <h2 className="text-2xl font-semibold text-center text-gray-900 mb-6">
                 Aloqa Ma'lumotlari
               </h2>
@@ -93,13 +93,18 @@ const App = () => {
                   link="mailto:info@ilmiy.uz"
                 />
                 <ContactItem
-                  icon={<MailIcon className=" text-yellow-500" />}
+                  icon={
+                    <MailIcon
+                      
+                      className="h-6 w-6 text-yellow-500"
+                    />
+                  }
                   label="E-xat"
                   value="mininnovation@exat.uz"
                   link="mailto:mininnovation@exat.uz"
                 />
                 <ContactItem
-                  icon={<MapPin width={70} className=" text-red-500" />}
+                  icon={<MapPin  className="w-6 h-6 text-red-500" />}
                   label="Manzil"
                   value="100174, Toshkent sh., Olmazor tumani, Universitet ko‘chasi, 7-uy"
                   link="https://maps.app.goo.gl/CSxXMhR8ZkXEJCNy9"
@@ -113,11 +118,11 @@ const App = () => {
               </div>
             </section>
 
-            <section className="bg-gray-100 px-6 md:px-10 rounded-xl  max-w-2xl mx-auto">
+            <section className="bg-gray-100 px-3 md:px-8 rounded-xl  mx-auto">
               <h2 className="text-2xl font-semibold text-center text-gray-900 mb-6">
                 Ijtimoiy Tarmoqlar
               </h2>
-              <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
+              <div className="grid sm:grid-cols-2 grid-cols-1 gap-2">
                 <SocialLink
                   icon={<Facebook className="h-6 w-6 text-blue-600" />}
                   label="Facebook"
